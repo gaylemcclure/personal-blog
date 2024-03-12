@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Blog</title>
-  <link rel="stylesheet" href="./Assets/css/reset.css" />
-  <link rel="stylesheet" href="./Assets/css/style.css" />
-  <script src="https://kit.fontawesome.com/a3a62ca005.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="./Assets/css/reset.css" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <link rel="stylesheet" href="./Assets/css/form.css" />
+    <script src="https://kit.fontawesome.com/a3a62ca005.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header><i class="fa-solid fa-sun"></i></header>
+    <main>
+      <div class="img-wrapper">
+        <div class="circle">
+          <h1>Personal Blog</h1>
+        </div>
+      </div>
+      <div class="form">
+        <h2>What's on your mind?</h2>
+        <form>
+          <label>Username<span class="req"> *</span></label>
+          <input id="username" type="text" aria-invalid="true" required />
+          <label>Title<span class="req"> *</span></label>
+          <input id="title" type="text" aria-invalid="true" required />
+          <label>Content<span class="req"> *</span></label>
+          <textarea id="content" type="text" aria-invalid="true" required></textarea>
+          <button id="submit" type="submit">Submit</button>
 
-</head>
-<body>
-  <header><i class="fa-solid fa-sun"></i></header>
-  <main>
-
-  </main>
-  <footer>
-    <p id="footer-txt">Copyright 2024 by Gayle McClure </p>
-  </footer>
-  <script src="Assets/js/script.js"></script>
-</body>
+          <span role="alert" id="invalid-username" class="hidden"> Please enter Username </span>
+          <span role="alert" id="invalid-title" class="hidden">Please enter Title </span>
+          <span role="alert" id="invalid-content" class="hidden"> Please enter Content </span>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p id="footer-txt">Copyright 2024 by Gayle McClure</p>
+    </footer>
+    <script src="Assets/js/form.js"></script>
+    <script src="Assets/js/logic.js"></script>
+  </body>
 </html>
