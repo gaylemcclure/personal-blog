@@ -3,9 +3,20 @@ main {
   display: flex;
   flex-direction: row;
   width: 100vw;
+  height: calc(100vh - 80px);
+  
+}
+
+h1 {
+  font-size: 2.5rem;
 }
 
 /*----Header----- */
+header {
+  text-align:end;
+  padding: 1.5rem;
+
+}
 
 /*----Image Side----- */
 .img-wrapper {
@@ -16,8 +27,8 @@ main {
 
 /* Calculate the height minus header and footer total */
 .circle {
-  height: calc(80vh - 160px);
-  width: calc(80vh - 160px);
+  height: calc(70vh - 80px);
+  width: calc(70vh - 80px);
   border-radius: 100%;
   background: rgb(36, 191, 219);
   background: linear-gradient(180deg, rgba(36, 191, 219, 1) 0%, rgba(249, 201, 97, 1) 100%);

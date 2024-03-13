@@ -1,0 +1,80 @@
+/*----General----- */
+h1 {
+  font-size: 2rem;
+}
+
+
+/*----Header----- */
+header {
+  display: flex;
+  padding: 1rem 1.5rem;
+}
+
+header > button {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  margin-left: auto;
+  border-radius: 4px;
+}
+
+header > i {
+  align-self: center;
+}
+
+header button > i {
+  margin-right: 5px;
+}
+
+
+
+/*----Main----- */
+#blog-wrapper {
+  margin: 1rem;
+}
+
+#blog-wrapper > div {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+#blog-wrapper > div > h4 {
+  font-size: 1.25rem;
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+#blog-wrapper .content {
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+#blog-wrapper .user {
+  font-size: 14px;
+}
+
+
+
+/*----Footer----- */
+footer {
+  height: 160px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+}
+
+.info {
+  margin: 2rem 1rem;
+}
+
+footer i {
+  color: red;
+  margin-top: 2rem;
+}

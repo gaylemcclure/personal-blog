@@ -2,6 +2,7 @@ const usernameEl = document.querySelector("#username");
 const titleEl = document.querySelector("#title");
 const contentEl = document.querySelector("#content");
 const submitButton = document.querySelector("#submit");
+const blogKey = "blogPost";
 
 //Function to loop through the blog object and check if the inputs are valid. Will display text if not.
 const validateInputs = (obj) => {
@@ -35,6 +36,18 @@ const validateInputs = (obj) => {
   }
 };
 
+//Function to retrieve the array of blog posts from local storage to add to it
+const addToStorageArray = (key, data) => {
+  let blogArr = [JSON.parse(localStorage.getItem(key))];
+  //Find out if local storage is empty
+  if (blogArr[0] === null) {
+    localStorage.setItem(blogKey, JSON.stringify(data));
+  } else {
+    blogArr.push(data);
+    localStorage.setItem(blogKey, JSON.stringify(blogArr));
+  }
+};
+
 //The submit button function
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -48,12 +61,9 @@ submitButton.addEventListener("click", (e) => {
   //Checks the result of validate input function
   const validate = validateInputs(blog);
 
+  //If valid - calls storage function to add the data and change page
   if (validate) {
-    localStorage.setItem("blogPost", JSON.stringify(blog));
-    // window.location.href=""
-    console.log(window.location)
+    addToStorageArray(blogKey, blog);
+    window.location.href = "blog.html";
   }
-
-
-  
 });
