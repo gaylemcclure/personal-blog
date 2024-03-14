@@ -10,9 +10,7 @@ header {
   padding: 1rem 1.5rem;
 }
 
-header > button {
-  background-color: black;
-  color: white;
+header button.back-btn {
   padding: 0.5rem 1rem;
   margin-right: 1rem;
   margin-left: auto;
@@ -23,7 +21,7 @@ header > i {
   align-self: center;
 }
 
-header button > i {
+header .color-mode > i {
   margin-right: 5px;
 }
 
@@ -35,7 +33,6 @@ header button > i {
 }
 
 #blog-wrapper > div {
-  border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 4px;
@@ -43,7 +40,6 @@ header button > i {
 
 #blog-wrapper > div > h4 {
   font-size: 1.25rem;
-  border-bottom: 1px solid black;
   margin-bottom: 1rem;
 }
 
@@ -72,6 +68,14 @@ footer {
 
 .info {
   margin: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.info a {
+  text-decoration: none;
+  color: var(--secondary);
+  transition: all 2s;
 }
 
 footer i {

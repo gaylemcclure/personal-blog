@@ -21,8 +21,9 @@ header {
 /*----Image Side----- */
 .img-wrapper {
   width: 100%;
-  border-right: 12px black double;
+  border-right: 12px double var(--secondary);
   display: flex;
+  transition: all 2s;
 }
 
 /* Calculate the height minus header and footer total */
@@ -62,10 +63,14 @@ header {
   flex-direction: column;
   margin: 2rem auto auto;
  }
- input, textarea, button {
+ input, textarea, button[type="submit"] {
   margin: 0.75rem 0;
   border-radius: 5px;
   border: 1px solid rgb(75, 75, 75);
+  outline:none;
+ }
+ input:focus-visible, textarea:focus-visible {
+  border: 2px solid blue;
  }
 
  input {
@@ -78,12 +83,13 @@ header {
   height: 60px;
  }
 
- button {
+ button[type="submit"] {
   height: 40px;
-  background-color: black;
-  color: white;
+  background-color: var(--button);
   font-weight: 600;
   font-size: 0.85rem;
+  color: var(--primary);
+  transition: all 2s;
 
  }
 
