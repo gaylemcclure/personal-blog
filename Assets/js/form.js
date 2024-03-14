@@ -42,10 +42,10 @@ const addToStorageArray = (key, data) => {
   //Find out if local storage is empty
   if (blogArr === null) {
     localStorage.setItem(blogKey, JSON.stringify([data]));
-  } else if (Array.isArray(blogArr)){
-    blogArr.push(data)
+  } else if (Array.isArray(blogArr)) {
+    blogArr.push(data);
     localStorage.setItem(blogKey, JSON.stringify(blogArr));
-}
+  }
 };
 
 //The submit button function
