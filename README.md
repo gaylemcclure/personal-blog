@@ -1,4 +1,4 @@
-# personal-blog
+# Personal Blog
 
 > A two page website where users can input and view their blog posts. 
 > Live demo [_here_](https://gaylemcclure.github.io/personal-blog/).
@@ -11,28 +11,34 @@
 * [Setup](#setup)
 * [Usage](#usage)
 * [Contact](#contact)
-<!-- * [License](#license) -->
+
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+My Personal Blog is a website to quickly jot down your thoughts or learnings while at your desk. All entries made can be viewed on the second page, calling the data from local storage. 
+There is a light/dark mode available to select from by toggling the sun button. 
+
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- HTML
+- CSS
+- Javascript
 
 
 ## Features
 List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- Form page has inputs for user, title and content. Content is an expandable text area. 
+- Submit button performs validation on the click
+- If one or multiple field/s are empty, text will appear to tell you to enter data in the empty field. 
+- Once validated, the form will retrieve any saved data from local storage, and add this new data to it. 
+- You will then be directed to the blog page to view all saved entries
+- All entries show the title as entered in the input, content, and username. 
+- A footer is at the bottom of the blog page, with links to portfolio, this blog and my email
+- On both pages there is a light/dark mode that can be activated
+- The Sun shows light mode with white background and black text. When clicking the sun button it switches to dark mode, 
+  black background and white text. 
+- A back button on the blog page to return to the entry screen, 
 
 
 ## Screenshots
