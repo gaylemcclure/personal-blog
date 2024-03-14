@@ -38,14 +38,14 @@ const validateInputs = (obj) => {
 
 //Function to retrieve the array of blog posts from local storage to add to it
 const addToStorageArray = (key, data) => {
-  let blogArr = [JSON.parse(localStorage.getItem(key))];
+  let blogArr = JSON.parse(localStorage.getItem(key));
   //Find out if local storage is empty
-  if (blogArr[0] === null) {
-    localStorage.setItem(blogKey, JSON.stringify(data));
-  } else {
-    blogArr.push(data);
+  if (blogArr === null) {
+    localStorage.setItem(blogKey, JSON.stringify([data]));
+  } else if (Array.isArray(blogArr)){
+    blogArr.push(data)
     localStorage.setItem(blogKey, JSON.stringify(blogArr));
-  }
+}
 };
 
 //The submit button function
